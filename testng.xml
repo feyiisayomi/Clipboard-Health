@@ -1,4 +1,7 @@
 <suite name="UI Suite" >
+    <listeners>
+        <listener class-name="common.Listeners" />
+    </listeners>
     <test name="Test" >
         <classes>
             <class name="uiTest.AmazonTest" />

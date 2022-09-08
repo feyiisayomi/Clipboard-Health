@@ -5,7 +5,9 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Listeners implements ITestListener
+import java.io.IOException;
+
+public class Listeners extends Utils implements ITestListener
 {
     @Override
     public void onTestStart(ITestResult result) {
@@ -21,7 +23,12 @@ public class Listeners implements ITestListener
     @Override
     public void onTestFailure(ITestResult result)
     {
-        ITestListener.super.onTestFailure(result);
+        //this statement is to take a screenshot anytime the test fails
+        try {
+            takeScreenshot();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

@@ -1,7 +1,14 @@
 package common;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Date;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -48,5 +55,17 @@ public class Utils {
     public static void CloseBrowser()
     {
         driver.quit();
+    }
+
+    /* This method is to take screenshot
+    * Get the date the screenshot is taken
+    * Convert the date to a string and replace some characters with "-"
+    * Then it creates a new folder and saves the screenshot in the new folder as the date taken*/
+    public void takeScreenshot() throws IOException {
+
+        Date runDate = new Date();
+        String screenShotname = runDate.toString().replace(" ","-").replace(":","-");
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshotFile, new File("./screenshot/"+screenShotname+".png"));
     }
 }
