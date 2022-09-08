@@ -1,5 +1,5 @@
 package pageObjects;
-
+// This Class is used to store all our web Element  and write automation functions
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

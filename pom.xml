@@ -21,11 +21,19 @@
             <version>4.4.0</version>
         </dependency>
 
-        <!--Add Web Manager dependency -->
+        <!--Add Webdriver Manager dependency -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.3.0</version>
+        </dependency>
+
+        <!--Add TESTNG framework dependency -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.6.1</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
