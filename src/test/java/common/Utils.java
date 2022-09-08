@@ -1,4 +1,4 @@
-package Common;
+package common;
 
 import java.time.Duration;
 import io.github.bonigarcia.wdm.WebDriverManager;
