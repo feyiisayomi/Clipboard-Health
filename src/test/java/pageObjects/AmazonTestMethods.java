@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AmazonTestMethods {
@@ -56,6 +57,8 @@ public class AmazonTestMethods {
     public void SortbyBrand() throws InterruptedException {
 
         hamburgerMenu.click();
+        ArrayList<String> Cohort = new ArrayList<>();
+
         //script to scroll down to the element specified
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();",categoryTitle);
         category.click();

@@ -36,6 +36,7 @@ public class AmazonTest {
         Assert.assertTrue(mainMethod.isAboutPresent());
         mainMethod.ListFeatures();
         Reporter.log(mainMethod.ListFeatures());
+
     }
 
     //This test is carried out after every @Test to quit the browser
